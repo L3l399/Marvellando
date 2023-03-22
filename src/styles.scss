@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.bg-white { background : rgb(245, 245, 245)}
+
+//start colori
+:root {
+  --bianco: rgb(245, 245, 245)!important;
+}
+
+:root {
+  --nero: rgb(5, 5, 5)!important;
+}
+
+:root {
+  --rosso: #D32F2F!important;
+}
+
+body {
+  background-color : var(--bianco);
+}
+//end colori
+
+// start navabar
+.icona-m {
+  width: 35px;
+  height: 40px;
+
+}
+
+.lista-nav{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.linea-navbar{
+width: 65%;
+background-color: var(--nero);
+height: 3px;
+margin: auto;
+}
+
+.linea-navbar2{
+  width: 65%;
+  background-color: var(--bianco);
+  height: 3px;
+  margin: auto;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+//end navbar
+
+.fondo{
+  width: 75%;
+background-color: var(--rosso);
+height: 10000px;
+margin: auto;
+margin-top: 70px;
+margin-bottom: 2px;
+border-radius: 15px;
+}
+
+
+
+
+
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
