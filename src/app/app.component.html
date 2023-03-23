@@ -1,83 +1,44 @@
-<header class="navbar-fixed bg-white">
-  <nav class="navbar navbar-expand-lg ">
-    <div class="container-fluid">
-
-      <div class="collapse navbar-collapse" id="navbarNav" >
-        <img src="../assets/images/icons8-marvel-480.png" class="icona-m">
-        <a class="navbar-brand" href="#"></a>
-
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-        <ul class="navbar-nav  lista-nav">
-
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Ricette</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contatti</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="linea-navbar"></div>
-  <div class="linea-navbar2"></div>
-</header>
+<app-navbar></app-navbar>
+<a class="titolo img-fluid" href="https://www.fontspace.com/category/marvel"><img src="https://see.fontimg.com/api/renderfont4/Dj83/eyJyIjoiZnMiLCJoIjoxNjAsInciOjEzNzUsImZzIjoxMTYsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/bWFydmVsbGFuZG8/marvel-regular.png" alt="Marvel fonts" height="80"></a>
 
 <div class="fondo">
+<app-carousel></app-carousel>
 
-  <ngb-carousel
-  #carousel
-  [interval]="1000"
-  [pauseOnHover]="pauseOnHover"
-  [pauseOnFocus]="pauseOnFocus"
-  (slide)="onSlide($event)"
-  >
-  <ng-template ngbSlide *ngFor="let img of images; index as i">
-    <div class="carousel-caption">
-      <h3>My slide {{i + 1}} title</h3>
+
+<div class="container text-center">
+  <div class="row align-items-start">
+    <div class="col">
+      One of three columns
     </div>
-    <a href="https://www.google.fr/?q=Number+{{i+1}}" target="_blank" rel="nofollow noopener noreferrer">
-      <div class="picsum-img-wrapper">
-        <img [src]="img" alt="My image {{i + 1}} description" />
-      </div>
+    <div class="col">
+      One of three columns
+    </div>
+    <div class="col">
+      One of three columns
+    </div>
+  </div>
+</div>
+
+
+<div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odio, dolores harum aliquid atque earum suscipit delectus? Veniam nobis, voluptates porro cum, ducimus officiis necessitatibus qui molestiae soluta nesciunt odio.</div>
+</div>
+
+<div class="container footer justify-content-center">
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">© 2022 Company, Inc</p>
+
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <img src="../assets/images/icons8-marvel-480.png" class="icona-m">
     </a>
-  </ng-template>
-</ngb-carousel>
 
-<hr />
 
-<div class="form-check">
-  <input type="checkbox" class="form-check-input" id="pauseOnHover" [(ngModel)]="pauseOnHover" />
-  <label class="form-check-label" for="pauseOnHover">Pause on hover</label>
+    <ul class="nav col-md-4 justify-content-end">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+  </footer>
 </div>
-<div class="form-check">
-  <input type="checkbox" class="form-check-input" id="pauseOnFocus" [(ngModel)]="pauseOnFocus" />
-  <label class="form-check-label" for="pauseOnFocus">Pause on focus</label>
-</div>
-<div class="form-check">
-  <input type="checkbox" class="form-check-input" id="unpauseOnArrow" [(ngModel)]="unpauseOnArrow" />
-  <label class="form-check-label" for="unpauseOnArrow">Unpause when clicking on arrows</label>
-</div>
-<div class="form-check">
-  <input type="checkbox" class="form-check-input" id="pauseOnIndicator" [(ngModel)]="pauseOnIndicator" />
-  <label class="form-check-label" for="pauseOnIndicator">Pause when clicking on navigation indicator</label>
-</div>
-<button type="button" (click)="togglePaused()" class="btn btn-outline-dark btn-sm">
-  {{paused ? 'Cycle' : 'Pause' }}
-</button>
-
-</div>
-
-
-
 <router-outlet></router-outlet>

@@ -1,0 +1,52 @@
+
+:root {
+  --bianco: rgb(245, 245, 245)!important;
+}
+
+:root {
+  --nero: rgb(5, 5, 5)!important;
+}
+
+:root {
+  --rosso: #D32F2F!important;
+}
+
+// start navabar
+.icona-m {
+  width: 35px;
+  height: 40px;
+
+}
+
+header{
+  z-index: 3;
+}
+.lista-nav{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.linea-navbar{
+width: 65%;
+background-color: var(--nero);
+height: 3px;
+margin: auto;
+border-radius: 3px;
+}
+
+.linea-navbar2{
+  width: 65%;
+  background-color: var(--bianco);
+  height: 3px;
+  margin: auto;
+  position: relative;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+//end navbar

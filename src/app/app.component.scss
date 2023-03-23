@@ -1,0 +1,40 @@
+//start colori
+:root {
+  --bianco: rgb(245, 245, 245)!important;
+}
+
+:root {
+  --nero: rgb(5, 5, 5)!important;
+}
+
+:root {
+  --rosso: #D32F2F!important;
+}
+
+body {
+  background-color : var(--bianco);
+}
+//end colori
+
+.titolo{
+// color: var(--rosso);
+display: flex;
+justify-content: center;
+position: relative;
+top: 75px;
+// z-index: 1;
+}
+
+.footer{
+  position: relative;
+  // top: 74.73px;
+  top: 80px;
+  // margin-left: 0px;
+  // margin-right: 0px;
+
+}
+.icona-m {
+  width: 35px;
+  height: 40px;
+
+}

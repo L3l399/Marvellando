@@ -8,11 +8,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from 'src/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CarouselComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
