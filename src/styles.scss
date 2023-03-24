@@ -3,26 +3,22 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-
+body {
+  background-color : var(--bianco);
+}
 
 .bg-white { background : rgb(245, 245, 245)}
 
 //start colori
-:root {
-  --bianco: rgb(245, 245, 245)!important;
-}
+:root {--bianco: rgb(245, 245, 245)!important;}
 
-:root {
-  --nero: rgb(5, 5, 5)!important;
-}
+:root {--nero: rgb(5, 5, 5)!important;}
 
-:root {
-  --rosso: #D32F2F!important;
-}
+:root {--rosso: #D32F2F!important;}
 //
 
 .fondo{
-  width: 75%;
+width: 75%;
 background-color: var(--rosso);
 height: auto;
 margin: auto;
@@ -33,16 +29,11 @@ position: fixed;
 position: relative;
 top: 80px;
 bottom: 2px;
-
-
 // // margin-left: auto;
 // // margin-right: auto;
 // // overflow-x: hidden;
 // overflow-y: scroll;
 }
-
-
-
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

@@ -9,14 +9,19 @@ import { MaterialExampleModule } from 'src/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselComponent } from './components/carousel/carousel.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { HeaderComponent } from './shared/header/header.component';
+import { FilmsComponent } from './components/films/films.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CarouselComponent,
-    NavbarComponent
+    HeaderComponent,
+    FilmsComponent,
+    FooterComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,
