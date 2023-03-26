@@ -2,7 +2,7 @@
 
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Noto Sans TC', sans-serif; }
 body {
   background-color : var(--bianco);
 }
@@ -17,23 +17,60 @@ body {
 :root {--rosso: #D32F2F!important;}
 //
 
+.prefondo{
+  position: relative;
+  // height: 100%;
+}
+
+
 .fondo{
-width: 75%;
-background-color: var(--rosso);
-height: auto;
+background: var(--rosso);
 margin: auto;
-// margin-top: 70px;
-margin-bottom: 2px;
+width: 80%;
+
 border-radius: 15px;
-position: fixed;
-position: relative;
-top: 80px;
-bottom: 2px;
+margin-top: 80px;
+min-width:0;
+
+
+// position: absolute;
+// top: 80px;
+// margin-top: 80px;
+// bottom: 2px;
+// bottom: 2px;
 // // margin-left: auto;
 // // margin-right: auto;
 // // overflow-x: hidden;
 // overflow-y: scroll;
 }
+.sticky{
+  position: sticky;
+  top: 60px;
+  // bottom: 2px;
+  // z-index: -999;
+  // margin-top: 80px;
+}
+// #fondo {
+//   background-color: var(--rosso); /* sostituire con il tuo colore preferito */
+//   width: 75%;
+//   position: sticky;
+//   top: 60px;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 1;
+//   padding: 20px;
+//   box-sizing: border-box;
+//   background-clip: padding-box;
+// }
 
+.sottotitolo{
+  color: var(--nero);
+  font-weight: 700;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-top: 10%;
+  text-align: center;
+  font-size: 50px;
+}
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';

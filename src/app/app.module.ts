@@ -13,6 +13,8 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FilmsComponent } from './components/films/films.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { CardComponent } from './components/card/card.component';
+import { ProssimeUsciteComponent } from './components/prossime-uscite/prossime-uscite.component';
+import { BenvenutoComponent } from './components/benvenuto/benvenuto.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CardComponent } from './components/card/card.component';
     HeaderComponent,
     FilmsComponent,
     FooterComponent,
-    CardComponent
+    CardComponent,
+    ProssimeUsciteComponent,
+    BenvenutoComponent
   ],
   imports: [
     BrowserModule,
