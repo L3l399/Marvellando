@@ -19,20 +19,18 @@ body {
 
 .prefondo{
   position: relative;
-  // height: 100%;
-}
-
 
 .fondo{
 background: var(--rosso);
 margin: auto;
 width: 80%;
-
+height: auto;
 border-radius: 15px;
 margin-top: 80px;
 min-width:0;
-
-
+display: block;
+float: left;
+margin-left: 10%;
 // position: absolute;
 // top: 80px;
 // margin-top: 80px;
@@ -43,15 +41,21 @@ min-width:0;
 // // overflow-x: hidden;
 // overflow-y: scroll;
 }
-.sticky{
-  position: sticky;
-  top: 60px;
-  // bottom: 2px;
-  // z-index: -999;
-  // margin-top: 80px;
+// .prefondo .fondo {
+//   background: var(--rosso);
+//   margin: auto;
+//   width: 80%;
+//   height: auto;
+//   border-radius: 15px;
+//   margin-top: 80px;
+//   min-width: 0;
+
+// }
+
+
 }
 // #fondo {
-//   background-color: var(--rosso); /* sostituire con il tuo colore preferito */
+//   background-color: var(--rosso);
 //   width: 75%;
 //   position: sticky;
 //   top: 60px;
@@ -63,6 +67,7 @@ min-width:0;
 //   box-sizing: border-box;
 //   background-clip: padding-box;
 // }
+
 
 .sottotitolo{
   color: var(--nero);

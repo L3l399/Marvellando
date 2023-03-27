@@ -1,14 +1,9 @@
 <app-header></app-header>
-<a class="titolo" ><img src="https://see.fontimg.com/api/renderfont4/Dj83/eyJyIjoiZnMiLCJoIjoxNjAsInciOjEzNzUsImZzIjoxMTYsImZnYyI6IiMwMDAwMDAiLCJiZ2MiOiIjRkZGRkZGIiwidCI6MX0/bWFydmVsbGFuZG8/marvel-regular.png" alt="Marvel fonts" height="" class="img-fluid img-titolo"></a>
+<a class="titolo" ><img [src]="getImageUrl()"></a>
+
 <div class="prefondo">
   <div class="fondo sticky" stackable="true">
-  <app-carousel></app-carousel>
-  <app-benvenuto></app-benvenuto>
-  <app-prossime-uscite></app-prossime-uscite>
-
-</div>
-</div>
-
-<!-- <div class="prova"></div> -->
-<app-footer></app-footer>
 <router-outlet></router-outlet>
+</div>
+</div>
+<app-footer></app-footer>

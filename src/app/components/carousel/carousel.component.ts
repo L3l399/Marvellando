@@ -18,6 +18,18 @@ export class CarouselComponent {
     },
     {id:  3,
       label: 'Tiramisú',
+    },
+    {id:  4,
+      label: 'Tiramisú',
+    },
+    {id:  5,
+      label: 'Tiramisú',
+    },
+    {id:  6,
+      label: 'Tiramisú',
+    },
+    {id:  7,
+      label: 'Tiramisú',
     }
   ]
   percorso = "../assets/images/carousel-";

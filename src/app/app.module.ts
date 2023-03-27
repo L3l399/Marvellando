@@ -15,6 +15,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { CardComponent } from './components/card/card.component';
 import { ProssimeUsciteComponent } from './components/prossime-uscite/prossime-uscite.component';
 import { BenvenutoComponent } from './components/benvenuto/benvenuto.component';
+import { HomeComponent } from './components/home/home.component';
+import { FilmsCardComponent } from './shared/films-card/films-card.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { BenvenutoComponent } from './components/benvenuto/benvenuto.component';
     FooterComponent,
     CardComponent,
     ProssimeUsciteComponent,
-    BenvenutoComponent
+    BenvenutoComponent,
+    HomeComponent,
+    FilmsCardComponent
   ],
   imports: [
     BrowserModule,
