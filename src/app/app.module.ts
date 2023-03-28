@@ -17,6 +17,8 @@ import { ProssimeUsciteComponent } from './components/prossime-uscite/prossime-u
 import { BenvenutoComponent } from './components/benvenuto/benvenuto.component';
 import { HomeComponent } from './components/home/home.component';
 import { FilmsCardComponent } from './shared/films-card/films-card.component';
+import { DetailComponent } from './components/films/detail/detail.component';
+import { FilmListComponent } from './components/films/film-list/film-list.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { FilmsCardComponent } from './shared/films-card/films-card.component';
     ProssimeUsciteComponent,
     BenvenutoComponent,
     HomeComponent,
-    FilmsCardComponent
+    FilmsCardComponent,
+    DetailComponent,
+    FilmListComponent
   ],
   imports: [
     BrowserModule,

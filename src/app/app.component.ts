@@ -12,14 +12,19 @@ export class AppComponent {
 
   imageNames = {
     '/home': 'titolo-marvellando.png',
-    '/films': 'titolo-film.png'
+    '/films': 'titolo-film.png',
+    // '/films/detail/': 'titolo-scheda_film.png',
+    defaultImageName: 'titolo-scheda_film.png'
   };
 
   constructor(private router: Router) { }
 
   getImageUrl(): string {
     const currentRoute = this.router.url;
-    const imageName = this.imageNames[currentRoute];
+    let imageName = this.imageNames[currentRoute];
+    if (!imageName) {
+      imageName = this.imageNames.defaultImageName;
+    }
     return `assets/images/${imageName}`;
   }
 

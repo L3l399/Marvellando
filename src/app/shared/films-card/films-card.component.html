@@ -5,9 +5,9 @@
           <img src="{{film.image}}" alt="">
           <div class="card-content">
             <p>{{film.description}}</p>
-            <a href="#" class="button">
+            <a class="button" routerLink="detail/{{film.title}}/{{film._id}}">
               Find out more
-              <span class="material-symbols-outlined">
+              <span class="material-symbols-outlined" >
                 arrow_right_alt
               </span>
             </a>

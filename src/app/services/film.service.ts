@@ -10,7 +10,12 @@ export class FilmService {
 
   constructor() { }
 
-  getFilm():Observable<Film[]>{
+  getFilms():Observable<Film[]>{
     return of(FILMS);
+  }
+
+  getFilm(id:number):Observable<Film>{
+    const film = FILMS.find(f => f._id === id);
+    return of (film);
   }
 }

@@ -1,0 +1,68 @@
+.container-lato-sx{
+  position: relative;
+}
+.lato-sx {
+  overflow: hidden;
+  position: relative;
+  margin: 10%;
+  // margin-right: 20%;
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+
+  img {
+    position: relative;
+    margin: 0 auto;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.lato-dx{
+  position: relative;
+  h2{
+  position: relative;
+  color: var(--nero);
+  font-weight: 550;
+  line-height: 1.2;
+  font-family: 'Noto Sans TC', sans-serif;
+  margin-top: 5%;
+  text-align: start;
+  font-size: 50px;
+  }
+
+  div{
+    position: relative;
+
+    h4{
+    position: relative;
+    color: var(--nero);
+    font-weight: 550;
+    line-height: 1.2;
+    font-family: 'Noto Sans TC', sans-serif;
+    margin-top: 14%;
+    // margin-bottom: 4%;
+    text-align: start;
+    font-size: 30px;
+    }
+    p{
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: 500;
+      color: var(--nero);
+      font-size: 17px;
+      padding: 0;
+      margin-top: 2%;
+      margin-right: 2%;
+      text-align: start;
+    }
+  }
+
+  .film-description{
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 500;
+    color: var(--nero);
+    font-size: 17px;
+    margin: 2%;
+    text-align: start;
+  }
+}
