@@ -12,7 +12,6 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FilmsComponent } from './components/films/films.component';
 import { FooterComponent } from './shared/footer/footer.component';
-import { CardComponent } from './components/card/card.component';
 import { ProssimeUsciteComponent } from './components/prossime-uscite/prossime-uscite.component';
 import { BenvenutoComponent } from './components/benvenuto/benvenuto.component';
 import { HomeComponent } from './components/home/home.component';
@@ -27,7 +26,6 @@ import { FilmListComponent } from './components/films/film-list/film-list.compon
     HeaderComponent,
     FilmsComponent,
     FooterComponent,
-    CardComponent,
     ProssimeUsciteComponent,
     BenvenutoComponent,
     HomeComponent,

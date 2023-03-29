@@ -7,35 +7,35 @@
     </div>
     <div class="col-7 lato-dx">
       <h2>{{film.title}}</h2>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-6">
-              <div>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-6">
+            <div>
               <h4>
-              <fa-icon [icon]="faClapperboard"/>
-              Director
-            </h4>
+                <fa-icon [icon]="faClapperboard"/>
+                Director
+              </h4>
               <p>{{film.director}}</p>
               <h4>
                 <fa-icon [icon]="faMasksTheater"/>
                 Cast</h4>
-              <p>{{film.cast}}</p>
-              <h4>
-                <fa-icon [icon]="faCalendarDay"/>
-                Data di Uscita</h4>
-              <p>{{film.date}}</p>
+                <p>{{film.cast}}</p>
+                <h4>
+                  <fa-icon [icon]="faCalendarDay"/>
+                  Data di Uscita</h4>
+                  <p>{{film.date | date: 'long'}}</p>
+                </div>
               </div>
-            </div>
-            <div class="col-6">
-              <h4>
-                <fa-icon [icon]="faScroll"/>
-                Trama
-              </h4>
-              <p class="film-description">{{film.description}}</p>
+              <div class="col-6">
+                <h4>
+                  <fa-icon [icon]="faScroll"/>
+                  Trama
+                </h4>
+                <p class="film-description">{{film.description}}</p>
+              </div>
             </div>
           </div>
         </div>
-    </div>
-  </div>
+      </div>
 
-</div>
+    </div>

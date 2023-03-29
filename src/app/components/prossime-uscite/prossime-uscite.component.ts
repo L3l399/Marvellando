@@ -7,5 +7,5 @@ import { Film } from 'src/app/models/film.model';
   styleUrls: ['./prossime-uscite.component.scss']
 })
 export class ProssimeUsciteComponent {
-@Input() films: Film[];
+  @Input() films: Film[];
 }

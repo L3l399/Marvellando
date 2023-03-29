@@ -5,14 +5,15 @@
     </div>
     <div class="carousel-caption">
       <!-- <h3>{{image.label}}</h3>
-      immagine {{i +1}} di {{images.length}} -->
-       <!-- <h5  *ngIf="i + 1 == images.length">ultima immagine</h5> -->
+        immagine {{i +1}} di {{images.length}} -->
+        <!-- <h5  *ngIf="i + 1 == images.length">ultima immagine</h5> -->
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+  <ng-template #noSlide>
+    <div>
+      <img [src]="percorso + images[0].id + '.png'" [alt]="images[0].label" class="img-fluid" />
     </div>
   </ng-template>
-</ngb-carousel>
-
-<ng-template #noSlide>
-  <div>
-    <img [src]="percorso + images[0].id + '.png'" [alt]="images[0].label" class="img-fluid" />
-  </div>
-</ng-template>
+  

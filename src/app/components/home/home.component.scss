@@ -1,26 +1,106 @@
 
 .img-titolo{
-width: 40%;
-// height: 30%;
+  width: 40%;
+  // height: 30%;
 }
 
-.benvenuto{
+//card
+.main{
+  position: relative;
+  top: 2%;
+}
+
+.sottotitolo{
   color: var(--nero);
   font-weight: 700;
   font-family: 'Noto Sans TC', sans-serif;
-  margin-top: 5%;
+  margin-top: 10%;
   text-align: center;
   font-size: 50px;
 }
+// p {
+  //   position: relative;
+  //   margin-bottom: 0rem;
+  //   top: 30px;
+  //   margin: 10px;
+  // }
+  .contenitore-card{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
 
-.testo-benvenuto{
-  font-family: 'Noto Sans TC', sans-serif;
-  font-weight: 600;
-  color: var(--nero);
-  font-size: small;
-  padding: 20px;
-  margin-top: 2%;
-}
+  // $color-primary-white: var(--bianco);
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+
+  .card {
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    color: rgb(245, 245, 245);
+    box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0.9;
+      transition: opacity .2s ease-out;
+    }
+
+    p, a {
+      position: absolute;
+      opacity: 0;
+      max-width: 80%;
+      transition: opacity .3s ease-out;
+      font-family: 'Noto Sans TC', sans-serif;
+      text-shadow: 2px 2px 2px #000,
+      -2px -2px 2px #000,
+      2px -2px 2px #000,
+      -2px 2px 2px #000;
+
+    }
+
+    a {
+      inset: auto auto 40px 30px;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    &:hover p, &:hover a {
+      opacity: 1;
+      transition: opacity .5s .1s ease-in;
+      // margin: auto;
+    }
+
+    &:hover img {
+      transition: opacity .3s ease-in;
+      opacity: 0.5;
+      // opacity: 0.7!important;
+      // box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.584)!important;
+    }
+
+  }
+
+  .material-symbols-outlined {
+    vertical-align: middle;
+  }
+
+
 
 
 

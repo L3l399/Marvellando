@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
-import { NgFor } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+// import { NgbCarousel, NgbCarouselModule, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
+// import { NgFor } from '@angular/common';
+// import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-carousel',
@@ -11,25 +11,25 @@ import { FormsModule } from '@angular/forms';
 export class CarouselComponent {
   images = [
     {id:  1,
-      label: 'Spaghetti  asdhfo',
+      label: '',
     },
     {id:  2,
-      label: 'Tagliata di manzo',
+      label: '',
     },
     {id:  3,
-      label: 'Tiramisú',
+      label: '',
     },
     {id:  4,
-      label: 'Tiramisú',
+      label: '',
     },
     {id:  5,
-      label: 'Tiramisú',
+      label: '',
     },
     {id:  6,
-      label: 'Tiramisú',
+      label: '',
     },
     {id:  7,
-      label: 'Tiramisú',
+      label: '',
     }
   ]
   percorso = "../assets/images/carousel-";

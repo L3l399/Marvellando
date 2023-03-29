@@ -24,23 +24,23 @@ export class DetailComponent implements OnInit  {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private filmService: FilmService
-  ){}
+    ){}
 
     ngOnInit(): void {
-        this.onGetFilm();
+      this.onGetFilm();
     }
 
-  onGetFilm():void{
-    const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));// mi arriva una stringa e la trasformo in numero
-    // const id = Number(this.activatedRoute.snapshot.paramMap.get('id')); esempio se ho piú elemnti
+    onGetFilm():void{
+      const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));// mi arriva una stringa e la trasformo in numero
+      // const id = Number(this.activatedRoute.snapshot.paramMap.get('id')); esempio se ho piú elemnti
 
-    this.filmService.getFilm(id).subscribe({
-      next: (res) =>{
-        this.film = res;
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    })
+      this.filmService.getFilm(id).subscribe({
+        next: (res) =>{
+          this.film = res;
+        },
+        error: (err) => {
+          console.log(err);
+        }
+      })
+    }
   }
-}
