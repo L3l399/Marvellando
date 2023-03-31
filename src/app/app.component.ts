@@ -14,6 +14,7 @@ export class AppComponent {
     '/home': 'titolo-marvellando.png',
     '/films': 'titolo-film.png',
     // '/films/detail/': 'titolo-scheda_film.png',
+    '/register': 'titolo-registrati.png',
     defaultImageName: 'titolo-scheda_film.png'
   };
 

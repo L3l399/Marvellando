@@ -8,6 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialExampleModule } from 'src/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PasswordModule } from 'primeng/password';
+import { DividerModule } from 'primeng/divider';
+import { SpeedDialModule } from 'primeng/speeddial';
+import { ToastModule } from 'primeng/toast';
+import { MessagesModule } from 'primeng/messages';
+
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { FilmsComponent } from './components/films/films.component';
@@ -18,6 +25,7 @@ import { HomeComponent } from './components/home/home.component';
 import { FilmsCardComponent } from './shared/films-card/films-card.component';
 import { DetailComponent } from './components/films/detail/detail.component';
 import { FilmListComponent } from './components/films/film-list/film-list.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +39,8 @@ import { FilmListComponent } from './components/films/film-list/film-list.compon
     HomeComponent,
     FilmsCardComponent,
     DetailComponent,
-    FilmListComponent
+    FilmListComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +48,14 @@ import { FilmListComponent } from './components/films/film-list/film-list.compon
     BrowserAnimationsModule,
     MaterialExampleModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    PasswordModule,
+    DividerModule,
+    SpeedDialModule,
+    ToastModule,
+    MessagesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

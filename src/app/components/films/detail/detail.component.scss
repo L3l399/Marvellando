@@ -25,7 +25,7 @@
     color: var(--nero);
     font-weight: 550;
     line-height: 1.2;
-    font-family: 'Noto Sans TC', sans-serif;
+    font-family: var(--titolo);
     margin-top: 5%;
     text-align: start;
     font-size: 50px;
@@ -39,7 +39,7 @@
       color: var(--nero);
       font-weight: 550;
       line-height: 1.2;
-      font-family: 'Noto Sans TC', sans-serif;
+      font-family: var(--titolo);
       margin-top: 14%;
       // margin-bottom: 4%;
       text-align: start;
