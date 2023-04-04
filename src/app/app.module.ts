@@ -14,6 +14,7 @@ import { DividerModule } from 'primeng/divider';
 import { SpeedDialModule } from 'primeng/speeddial';
 import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
+import { PaginatorModule } from 'primeng/paginator';
 
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -56,7 +57,8 @@ import { RegisterComponent } from './components/user/register/register.component
     DividerModule,
     SpeedDialModule,
     ToastModule,
-    MessagesModule
+    MessagesModule,
+    PaginatorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

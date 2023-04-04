@@ -43,5 +43,43 @@ header{
 
   a{
     font-family: var(--titolo);
+    font-size: 20px;
   }
+
   //end navbar
+
+/* Definizione della classe "sottolineato" */
+.sottolineato {
+  /* Posizione relativa per permettere il posizionamento assoluto del ::before */
+  position: relative;
+}
+
+/* Definizione del selettore ::before per creare la sottolineatura */
+.sottolineato::before {
+  /* Aggiunta di contenuto vuoto per permettere la visualizzazione della pseudo-elemento */
+  content: "";
+  /* Posizionamento assoluto rispetto alla classe "sottolineato" */
+  position: absolute;
+  /* Posizionamento al di sotto della classe "sottolineato" */
+  bottom: -3px;
+  /* Allineamento sinistro della sottolineatura */
+  left: 0;
+  /* Dimensione iniziale della sottolineatura (0%) */
+  width: 0%;
+  /* Altezza della sottolineatura */
+  height: 3px;
+  /* Colore di sfondo della sottolineatura */
+  background-color: var(--nero);
+  /* Aggiunta di transizione per animare la larghezza della sottolineatura */
+  transition: width 0.2s ease-in-out;
+}
+
+/* Regola CSS che attiva la transizione quando il mouse è sopra il link di navigazione */
+.nav-link:hover .sottolineato::before {
+  /* Aumento della larghezza della sottolineatura al 100% */
+  width: 100%;
+}
+
+
+
+

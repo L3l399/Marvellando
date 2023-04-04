@@ -5,7 +5,7 @@ import { Message } from 'primeng/api';
 import { CustomValidator }  from '../customValidator';
 import { UserService } from 'src/app/services/user.service';
 import  { Router } from '@angular/router';
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-register',
@@ -22,7 +22,8 @@ export class RegisterComponent {
     private config: PrimeNGConfig,
     private messageService: MessageService,
     private userService: UserService,
-    private router: Router
+    private router: Router,
+    private modalService: NgbModal,
     ) {}
 
   ngOnInit() {
@@ -62,7 +63,7 @@ export class RegisterComponent {
     }
 
     this.userService.datiUtente.next(user);
-    this.router.navigate(['home'])
+    this.router.navigate(['home']);
   }
 
   showToast1() {
@@ -70,4 +71,12 @@ export class RegisterComponent {
     this.messageService.add({ key: 'toast1', severity: 'success', summary: 'Registrazione effettuata', detail: 'benvenuto in marvellando' });
   }
 
+  open(content: any, titolo?: string){
+    let title = titolo;
+    this.modalService.open(content, {ariaLabelledBy: 'modale registrazione', size: 'md', centered: true}).result.then((res) => {
+      console.log('azione da eseguire' + titolo);
+    }).catch((res) => {
+      console.log('nessuna azione da eseguire');
+    })
+  }
 }

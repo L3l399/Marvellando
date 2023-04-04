@@ -29,6 +29,7 @@ margin: auto;
 width: 80%;
 height: auto;
 border-radius: 15px;
+border: var(--nero) 2px solid;
 margin-top: 80px;
 min-width:0;
 display: block;
@@ -55,5 +56,28 @@ font-family: 'Noto Sans TC', sans-serif;
   border-radius: 0.5rem!important;
   height: 54px;
 }
+
+.p-paginator {
+  background: transparent!important;
+  /* color: #490707; */
+  /* border: solid #e9ecef; */
+  border-width: 0px;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page.p-highlight {
+  background: var(--bianco);
+  border-color: var(--nero);
+
+  color: var(--nero);
+  font-size: 20px;
+}
+.p-link:focus {
+  outline: 0 none;
+  outline-offset: 0;
+  box-shadow: 0 0 0 0.1rem var(--nero)!important;
+}
+
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
