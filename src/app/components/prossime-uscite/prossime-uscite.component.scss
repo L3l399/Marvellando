@@ -4,9 +4,9 @@
 }
 
 .sottotitolo{
-  color: var(--nero);
+  color: var(--bianco);
   font-weight: 700;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: var(--titolo);
   margin-top: 10%;
   text-align: center;
   font-size: 50px;
@@ -123,4 +123,3 @@
     vertical-align: middle;
   }
 
-  

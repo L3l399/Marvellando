@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Film } from 'src/app/models/film.model';
 import { FilmService } from 'src/app/services/film.service';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-home',
@@ -10,10 +11,20 @@ import { FilmService } from 'src/app/services/film.service';
 export class HomeComponent implements OnInit {
 
   films: Film[];
+  name: string;
+  email: string;
 
-  constructor(private filmService: FilmService){}
+  constructor(
+    private filmService: FilmService,
+    private userService: UserService
+    ){}
 
   ngOnInit(): void {
+    this.getFilm();
+    this.getDatiUtenteModale();
+  }
+
+  getFilm(){
     this.filmService.getFilms().subscribe({
       next: (response) => {
         this.films = response;
@@ -27,5 +38,26 @@ export class HomeComponent implements OnInit {
         console.log(error);
       }
     })
+  }
+
+  getDatiUtenteModale(){
+    this.userService.datiUtente.subscribe((res: any) => {
+      localStorage.setItem('name', res.name);
+      localStorage.setItem('email', res.email);
+    });
+
+    if(localStorage.getItem('name')){
+      this.name = localStorage.getItem('name');
+      this.email = localStorage.getItem('email');
+    }
+  }
+
+  closeModal(){
+    localStorage.removeItem('name');
+    localStorage.removeItem('email');
+    localStorage.clear();
+
+    this.name = '';
+    this.email = '';
   }
 }

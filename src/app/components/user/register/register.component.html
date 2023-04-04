@@ -1,0 +1,167 @@
+<section class="">
+  <div class=" shadow-2-strong card-registration justify-content-center" style="border-radius: 15px;">
+    <div class="p-4 p-md-5 justify-content-center contenitore2">
+
+      <p-messages [(value)]="messages" [enableService]="false" [closable]="true"></p-messages>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <!-- name -->
+          <div class="col-md-6 mb-4">
+
+            <div class="form-outline">
+              <label class="form-label" for="firstName">Nome</label>
+              <input type="text" id="name" class="form-control form-control-lg"  name="name" formControlName="name"/>
+              <div class="errori">
+                <p class="help is-danger" *ngIf="!form.get('name').valid && form.get('name').touched">Il campo nome é obbligatorio</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- last name -->
+          <div class="col-md-6 mb-4">
+
+            <div class="form-outline">
+              <label class="form-label" for="lastName">Cognome</label>
+              <input type="text" id="lastName" class="form-control form-control-lg"  name="lastName" formControlName="lastName"/>
+              <div class="errori">
+                <p class="help is-danger" *ngIf="!form.get('lastName').valid && form.get('lastName').touched">Il campo nome é obbligatorio</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <!-- birth date -->
+          <div class="col-md-6 mb-4 d-flex align-items-center">
+
+            <div class="form-outline datepicker w-100">
+              <label for="birthdayDate" class="form-label">Data di Nascita</label>
+              <input type="date" class="form-control form-control-lg" id="birthDate" name="birthDate" formControlName="birthDate"/>
+              <div class="errori">
+                <p class="help is-danger" *ngIf="!form.get('birthDate').valid && form.get('birthDate').touched">Il campo data é obbligatorio</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- email -->
+          <div class="col-md-6 mb-4">
+
+            <div class="form-outline">
+              <label class="form-label" for="lastName">Email</label>
+              <input type="text" id="email" class="form-control form-control-lg"  name="email" formControlName="email"/>
+              <div class="errori">
+                <p class="help is-danger" *ngIf="form.controls.email.hasError('required') && form.get('email').dirty">Il campo email è obbligatorio.</p>
+                <p class="help is-danger" *ngIf="form.controls['email'].hasError('email')">L'email non è valida.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+
+          <!-- password -->
+          <div class="col-md-6 mb-4 pb-2">
+
+            <div class="form-outline">
+              <label class="form-label" for="password">Password</label>
+              <p-password [toggleMask]="true" name="password" formControlName="password" strongRegex="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$">
+                <ng-template pTemplate="header">
+                  <h6>Pick a password</h6>
+                </ng-template>
+                <ng-template pTemplate="footer">
+                  <p-divider></p-divider>
+                  <p class="mt-2">Suggestions</p>
+                  <ul class="pl-2 ml-2 mt-0" style="line-height: 1">
+                    <li>Almeno una minuscola</li>
+                    <li>Almeno una maiuscola</li>
+                    <li>Almeno un numero</li>
+                    <li>Almeno un carattere speciale</li>
+                    <li>8-16 caratteri</li>
+                  </ul>
+                </ng-template>
+              </p-password>
+              <div class="errori">
+                <p class="help is-danger" *ngIf="form.controls['password'].hasError('required') && !form.get('password').dirty && form.get('password').touched">la password é obbligatoria</p>
+                <p class="help is-danger" *ngIf="form.controls.password.hasError('pattern')"> La password deve almeno contenere 1 numero, 1 minuscola, 1 maiuscola, 1 carattere speciale e lunga da 8-16 caratteri.</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- check password -->
+          <div class="col-md-6 mb-4 pb-2">
+
+            <div class="form-outline">
+              <label class="form-label" for="repeatPassword">Ripeti Password</label>
+              <p-password [toggleMask]="false" name="repeatPassword" [feedback]="false" formControlName="repeatPassword"></p-password>
+            </div>
+
+            <div class="errori">
+              <p class="help is-danger" *ngIf="form.controls.repeatPassword.hasError('required') && !form.get('repeatPassword').dirty && form.get('repeatPassword').touched">Il campo ripeti password è obbligatorio</p>
+              <p class="help is-danger" *ngIf="form.getError('diversa') && form.get('repeatPassword').touched && form.get('repeatPassword').dirty"> Le password devono combaciare.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+
+          <!-- sesso -->
+          <div class="col-md-6 mb-4 col-sesso">
+
+            <h6 class="mb-2 pb-1">Sesso: </h6>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="gender" formControlName="gender"
+              value="option1"/>
+              <label class="form-check-label sesso" for="gender">F</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input " type="radio" name="gender" id="maleGender" formControlName="gender"
+              value="option2" />
+              <label class="form-check-label sesso" for="gender">M</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="gender" formControlName="gender"
+              value="option3" />
+              <label class="form-check-label sesso" for="gender">Altro</label>
+            </div>
+            <div class="errori">
+              <p class="help is-danger" *ngIf="form.controls['gender'].hasError('required') && form.get('gender').touched"></p>
+            </div>
+
+          </div>
+
+          <div class="col-md-6 mb-4 pb-2 check">
+            <div class="check">
+              <input class="form-check-input me-3" type="checkbox" name="check" formControlName="check"/>
+              <label class="form-check-label text-white condizioni" for="check">
+                Dichiaro di accettare i <a href="" class="text-white"><u>Terms and Conditions</u></a> del tuo sito.
+              </label>
+              <p class="help is-danger" *ngIf="!form.get('check').valid && form.get('check').touched">Per proseguire è necessario accettare</p>
+            </div>
+          </div>
+
+
+
+        </div>
+
+        <!-- jason -->
+        <div class="mt-4 pt-2">
+          <!-- [disabled]="!form.valid" -->
+          <button type="submit" class="bottone btn-lg"  pButton pRipple (click)="showToast1()" label="Registrati"></button>
+          <p-toast key="toast1"></p-toast>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+</section>
+

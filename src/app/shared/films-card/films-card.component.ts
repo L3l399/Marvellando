@@ -7,5 +7,6 @@ import { Film } from 'src/app/models/film.model';
   styleUrls: ['./films-card.component.scss']
 })
 export class FilmsCardComponent {
+
   @Input() films: Film[]
 }

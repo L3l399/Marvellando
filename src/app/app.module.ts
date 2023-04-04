@@ -25,7 +25,8 @@ import { HomeComponent } from './components/home/home.component';
 import { FilmsCardComponent } from './shared/films-card/films-card.component';
 import { DetailComponent } from './components/films/detail/detail.component';
 import { FilmListComponent } from './components/films/film-list/film-list.component';
-import { RegisterComponent } from './components/register/register.component';
+import { RegisterComponent } from './components/user/register/register.component';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { RegisterComponent } from './components/register/register.component';
     FilmsCardComponent,
     DetailComponent,
     FilmListComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,

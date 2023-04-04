@@ -1,5 +1,5 @@
 
-  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+.card-registration .select-input.form-control[readonly]:not([disabled]) {
   font-size: 1rem;
   line-height: 2.15;
   padding-left: .75em;
@@ -28,7 +28,7 @@
 
       label,h6{
         position: relative;
-        color: var(--nero);
+        color: var(--bianco);
         font-weight: 550;
         // line-height: 1.2;
         font-family: var(--titolo);
@@ -43,21 +43,30 @@
         height: 50%;
       }
 
-      .sesso{
+      .sesso, .check{
         font-family: 'Noto Sans TC', sans-serif;
         font-size: 20px;
         font-weight: 400;
+      }
+
+      .check{
+        margin-top: 2%;
+        .form-check-input[type=checkbox] {
+          border-radius: 0.25em;
+          margin: unset;
+      }
       }
 
       .bottone{
         background-color: var(--nero);
         color: var(--bianco);
         border-radius: 10px;
-        height: 50px;
-        width: 100%;
+        height: 55px;
+        width: 49%;
         font-size: 30px;
         font-family: var(--titolo);
         cursor: pointer;
+        margin-left: 25%;
       }
 
       .form-control{
@@ -72,7 +81,9 @@
         padding-top: 25px;
       }
 
-
+    }
+    .condizioni{
+      font-size: 20px !important;
     }
 
   }

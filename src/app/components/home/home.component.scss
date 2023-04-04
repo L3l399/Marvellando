@@ -11,9 +11,9 @@
 }
 
 .sottotitolo{
-  color: var(--nero);
+  color: var(--bianco);
   font-weight: 700;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: var(--titolo);
   margin-top: 10%;
   text-align: center;
   font-size: 50px;
@@ -99,6 +99,50 @@
   .material-symbols-outlined {
     vertical-align: middle;
   }
+
+  // modale
+  div#container-utente {
+    // clear: left;
+    margin-left: -10%;
+    background: #000000b0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    z-index: 10;
+
+    div#dati-utente {
+      background: white;
+      border: 5px solid var(--rosso);
+      border-radius: 30px;
+      padding: 16px;
+
+      h2 {
+        font-size: 23px!important;
+        text-align: center;
+      }
+
+      ul {
+        height: 90px;
+        margin-top: 33px;
+        font-size: 18px;
+
+        li {
+          line-height: 40px;
+        }
+      }
+
+      button.btn.btn-primary.btn-lg {
+        width: 50%;
+        margin-left: 25%;
+      }
+    }
+  }
+
 
 
 
