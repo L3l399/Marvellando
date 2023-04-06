@@ -69,7 +69,6 @@ export class HomeComponent implements OnInit {
   open(content: any, nome?: string){
     let name = nome;
     this.modalService.open(content, {ariaLabelledBy: 'modale registrazione', size: 'md', centered: true}).result.then((res) => {
-
       console.log('azione da eseguire' + name);
     }).catch((res) => {
       console.log('nessuna azione da eseguire');
