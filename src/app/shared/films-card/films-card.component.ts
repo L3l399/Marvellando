@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, Output, OnInit, OnDestroy } from '@angular/core';
 import { Router } from '@angular/router';
-import { pipe, take } from 'rxjs';
+import { delay, pipe, take } from 'rxjs';
 import { Film } from 'src/app/models/film.model';
 import { FilmService } from './../../services/film.service';
 
@@ -29,6 +29,7 @@ export class FilmsCardComponent implements OnInit {
 
     ngOnInit(): void {
       this.prendiFilm();
+
     }
 
     prendiFilm(){
@@ -36,22 +37,22 @@ export class FilmsCardComponent implements OnInit {
       .pipe(
         take(1)
         )
-      .subscribe({
-        next: (response) => {
-          this.films = response;
-          this.filmTotali = response.length;
-          if(this.pag){
-            this.ultimiFilm();
+        .subscribe({
+          next: (response) => {
+            this.films = response;
+            this.filmTotali = response.length;
+            if(this.pag){
+              this.ultimiFilm();
+            }
+          },
+          error: (error) => {
+            console.log(error);
           }
-        },
-        error: (error) => {
-          console.log(error);
-        }
-      })
-    }
+        })
+      }
 
-    ultimiFilm(){
-      this.filmService.getFilms().subscribe({
+      ultimiFilm(){
+        this.filmService.getFilms().subscribe({
           next: (response) => {
             this.films = response;
             this.films = this.films.sort((a, b) => {
@@ -71,11 +72,6 @@ export class FilmsCardComponent implements OnInit {
         this.page = event.page;
       }
 
-
-
-
-
-
       // ngOnDestroy(): void {
       //   console.log('utente uscito dal componente')
       // }
@@ -94,3 +90,4 @@ export class FilmsCardComponent implements OnInit {
 
 
 
+    

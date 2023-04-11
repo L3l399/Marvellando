@@ -1,3 +1,4 @@
+import { take } from 'rxjs';
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { MessageService, PrimeNGConfig } from 'primeng/api';
@@ -50,20 +51,24 @@ export class RegisterComponent {
     password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/)]),
     repeatPassword: new FormControl('', Validators.required),
     gender: new FormControl('', Validators.requiredTrue),
-    check: new FormControl('', Validators.requiredTrue)
+    check: new FormControl(false, Validators.requiredTrue)
   },
   [CustomValidator.MatchValidator('password', 'repeatPassword')]
   );
 
   onSubmit(){
-    // console.log(this.form.value);
-    const user = {
-      name: this.form.value.name,
-      email: this.form.value.email,
-    }
+    const user = this.form.value;
 
-    this.userService.datiUtente.next(user);
-    this.router.navigate(['home']);
+    this.userService.insertUser(user).pipe(take(1)).subscribe({
+      next: (res) => {
+        console.log(res);
+        this.userService.datiUtente.next(user);
+        this.router.navigate(['home']);
+      },
+      error: (err) => {
+        console.log(err);
+      }
+    })
   }
 
   showToast1() {
@@ -73,7 +78,7 @@ export class RegisterComponent {
 
   open(content: any, titolo?: string){
     let title = titolo;
-    this.modalService.open(content, {ariaLabelledBy: 'modale registrazione', size: 'md', centered: true}).result.then((res) => {
+    this.modalService.open(content, {ariaLabelledBy: 'modale registrazione', size: 'lg', centered: true}).result.then((res) => {
       console.log('azione da eseguire' + titolo);
     }).catch((res) => {
       console.log('nessuna azione da eseguire');

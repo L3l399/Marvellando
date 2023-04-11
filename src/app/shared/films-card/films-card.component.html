@@ -1,3 +1,6 @@
+<ng-template [ngIf]="films" [ngIfElse]="loading">
+
+
 
 <div class="container-cards">
   <div class="container-pagination" *ngIf="pag!='home'">
@@ -31,10 +34,10 @@
   </div>
 
 </div>
+</ng-template>
 
 
-
-
-
-
+  <ng-template #loading>
+    <app-loader></app-loader>
+   </ng-template>
 

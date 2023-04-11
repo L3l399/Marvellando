@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MaterialExampleModule } from 'src/material.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -27,6 +28,9 @@ import { FilmsCardComponent } from './shared/films-card/films-card.component';
 import { DetailComponent } from './components/films/detail/detail.component';
 import { FilmListComponent } from './components/films/film-list/film-list.component';
 import { RegisterComponent } from './components/user/register/register.component';
+import { NewFilmComponent } from './components/films/new-film/new-film.component';
+import { LoaderComponent } from './shared/loader/loader.component';
+
 
 
 @NgModule({
@@ -43,6 +47,9 @@ import { RegisterComponent } from './components/user/register/register.component
     DetailComponent,
     FilmListComponent,
     RegisterComponent,
+    NewFilmComponent,
+    LoaderComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -58,7 +65,8 @@ import { RegisterComponent } from './components/user/register/register.component
     SpeedDialModule,
     ToastModule,
     MessagesModule,
-    PaginatorModule
+    PaginatorModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

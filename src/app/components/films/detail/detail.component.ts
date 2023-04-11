@@ -31,7 +31,7 @@ export class DetailComponent implements OnInit  {
     }
 
     onGetFilm():void{
-      const id = Number(this.activatedRoute.snapshot.paramMap.get('_id'));// mi arriva una stringa e la trasformo in numero
+      const id = this.activatedRoute.snapshot.paramMap.get('_id');// mi arriva una stringa e la trasformo in numero
       // const id = Number(this.activatedRoute.snapshot.paramMap.get('id')); esempio se ho piú elemnti
 
       this.filmService.getFilm(id).subscribe({

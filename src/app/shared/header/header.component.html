@@ -3,46 +3,63 @@
     <div class="container-fluid">
 
       <div class="collapse navbar-collapse" id="navbarNav" >
-        <img src="../assets/images/icons8-marvel-480.png" class="icona-m">
-        <a class="navbar-brand" routerLink="home"></a>
 
+        <div class="col-4">
+          <img src="../assets/images/icons8-marvel-480.png" class="icona-m">
+          <a class="navbar-brand" routerLink="home"></a>
+        </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <ul class="navbar-nav  lista-nav">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" routerLink="home">
-              <img src="../../../assets/images/icons8-groot.svg" alt="" routerLink="home" class="icone-nav">
-              <span class="sottolineato">Home</span>
-            </a>
-          </li>
+        <div class="col-4 d-flex justify-content-center">
+          <ul class="navbar-nav  lista-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" routerLink="home">
+                <img src="../../../assets/images/icons8-groot.svg" alt="" routerLink="home" class="icone-nav">
+                <span class="sottolineato">Home</span>
+              </a>
+            </li>
 
+            <li class="nav-item">
+              <a class="nav-link" routerLink="films">
+                <img src="../../../assets/images/icons8-x-men.svg" alt="" routerLink="films" class="icone-nav">
+                <span class="sottolineato">Film</span>
+              </a>
+            </li>
 
+            <li class="nav-item">
+              <a class="nav-link" routerLink="">
+                <img src="../../../assets/images/icons8-martello-di-thor-48 (1).png" alt="" class="icone-nav">
+                <span class="sottolineato">Contatti</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-          <li class="nav-item">
-            <a class="nav-link" routerLink="films">
-              <img src="../../../assets/images/icons8-x-men.svg" alt="" routerLink="films" class="icone-nav">
-            <span class="sottolineato">Film</span>
-            </a>
-          </li>
+        <div class="collapse navbar-collapse col-4 d-flex justify-content-end" id="navbarNav" >
+          <ul class="navbar-nav lista-nav-destra">
+            <div class="nav-item">
+              <a class="nav-link" routerLink="/films/new-film">
+                <img src="../../../assets/images/icons8-spider-man-vecchio.svg" alt="" class="icone-nav">
+                <img src="" alt="" class="icone-nav">
+                <span class="sottolineato">Nuovo Film</span>
+              </a>
+            </div>
 
-          <li class="nav-item">
-            <a class="nav-link" routerLink="">
-              <img src="../../../assets/images/icons8-martello-di-thor-48 (1).png" alt="" class="icone-nav">
-              <span class="sottolineato">Contatti</span>
-            </a>
-          </li>
-        </ul>
+            <div class="nav-item">
+              <a class="nav-link" routerLink="register">
+                <img src="../../../assets/images/icons8-capitan-america.svg" alt="" class="icone-nav">
+                <span class="sottolineato">Registrati</span>
+              </a>
+            </div>
+          </ul>
+        </div>
+
       </div>
 
-      <div class="nav-item">
-          <a class="nav-link" routerLink="register">
-            <img src="../../../assets/images/icons8-capitan-america.svg" alt="" class="icone-nav">
-            <span class="sottolineato">Registrati</span>
-          </a>
-      </div>
     </div>
+
   </nav>
   <div class="linea-navbar"></div>
   <!-- <div class="linea-navbar2"></div> -->

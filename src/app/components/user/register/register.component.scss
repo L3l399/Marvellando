@@ -6,6 +6,8 @@
   padding-right: .75em;
 }
 
+
+
 .p-messages {
   background-color: yellow;
   color: black;
@@ -21,6 +23,11 @@
   left: 0;
   right: 0;
   width: 100%;
+
+  .form-control{
+    border: 2.5px var(--nero) solid;
+  }
+
 
   .contenitore2{
     position: relative;
