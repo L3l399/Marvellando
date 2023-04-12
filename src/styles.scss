@@ -18,7 +18,12 @@ body {
 
 // start font
 :root{--titolo: 'Bangers', cursive;}
+:root{--thanos: 'thanos'}
 
+@font-face {
+  font-family: 'thanos';
+  src: url('./assets/fonts/AvengeroDisassembledRegular-nRvd4.ttf') format('truetype');
+}
 
 .prefondo{
   position: relative;

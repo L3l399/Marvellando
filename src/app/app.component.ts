@@ -16,6 +16,8 @@ export class AppComponent {
     // '/films/detail/': 'titolo-scheda_film.png',
     '/register': 'titolo-registrati.png',
     '/films/new-film': 'titolo-nuovo-film.png',
+    // '/login': 'titolo-login.png',
+    '/profile': 'titolo-profilo.png',
     defaultImageName: 'titolo-scheda_film.png'
   };
 

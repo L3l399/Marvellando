@@ -7,6 +7,8 @@ import { CustomValidator }  from '../customValidator';
 import { UserService } from 'src/app/services/user.service';
 import  { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import * as ClassicEditorBuild from '@ckeditor/ckeditor5-build-classic';
+
 
 @Component({
   selector: 'app-register',
@@ -17,6 +19,48 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class RegisterComponent {
   messages1: Message[];
   messages: Message[];
+
+
+  Editor = ClassicEditorBuild;
+
+  editorConfig = {
+    toolbar: {
+      items: [
+        'bold',
+        'italic',
+        'link',
+        'bulletedList',
+        'numberedList',
+        'heading',
+        '|',
+        'indent',
+        'outdent',
+        '|',
+        'codeBlock',
+        'imageUpload',
+        'blockQuote',
+        'insertTable',
+        'undo',
+        'redo',
+      ]
+    },
+    image: {
+      toolbar: [
+        'imageStyle:full',
+        'imageStyle:side',
+        '|',
+        'imageTextAlternative'
+      ]
+    },
+    table: {
+      contentToolbar: [
+        'tableColumn',
+        'tableRow',
+        'mergeTableCells'
+      ]
+    },
+    height: 300,
+  };
 
 
   constructor(
@@ -51,7 +95,8 @@ export class RegisterComponent {
     password: new FormControl('', [Validators.required, Validators.pattern(/^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[^\w\d\s:])([^\s]){8,16}$/)]),
     repeatPassword: new FormControl('', Validators.required),
     gender: new FormControl('', Validators.requiredTrue),
-    check: new FormControl(false, Validators.requiredTrue)
+    check: new FormControl(false, Validators.requiredTrue),
+    note: new FormControl('')
   },
   [CustomValidator.MatchValidator('password', 'repeatPassword')]
   );

@@ -2,42 +2,56 @@
 
 
 
-<div class="container-cards">
-  <div class="container-pagination" *ngIf="pag!='home'">
-    <div class="info-lista-film">
-      <strong>{{filmPerPagina}}</strong> Film su un totale <strong>{{filmTotali}}</strong> Film, pagina corrente: <strong>{{page}}</strong>
-    </div>
-
-    <p-paginator (onPageChange)="paginate($event)" [rows]="filmPerPagina" [totalRecords]="filmTotali" (rowsPerPageOptionsChange)="filmPerPagina" class="paginatore"></p-paginator>
-
-  </div>
-
-  <div class="contenitore-card" *ngFor="let film of films | slice: (page * filmPerPagina) - filmPerPagina : page * filmPerPagina">
-    <div class = "card">
-      <img src="{{film.image}}" alt="">
-      <div class="card-content">
-        <p>{{film.description}}</p>
-        <a class="button" routerLink="/films/detail/{{film.title}}/{{film._id}}" *ngIf="pag">
-          Find out more
-          <span class="material-symbols-outlined" >
-            arrow_right_alt
-          </span>
-        </a>
-        <a class="button" routerLink="detail/{{film.title}}/{{film._id}}" *ngIf="!pag">
-          Find out more
-          <span class="material-symbols-outlined" >
-            arrow_right_alt
-          </span>
-        </a>
+  <div class="container-cards">
+    <div class="container-pagination" *ngIf="pag!='home'">
+      <div class="info-lista-film">
+        <strong>{{filmPerPagina}}</strong> Film su un totale <strong>{{filmTotali}}</strong> Film, pagina corrente: <strong>{{page}}</strong>
       </div>
-    </div>
-  </div>
 
-</div>
+      <p-paginator (onPageChange)="paginate($event)" [rows]="filmPerPagina" [totalRecords]="filmTotali" (rowsPerPageOptionsChange)="filmPerPagina" class="paginatore"></p-paginator>
+
+    </div>
+
+    <div class="contenitore-card" *ngFor="let film of films | slice: (page * filmPerPagina) - filmPerPagina : page * filmPerPagina">
+
+      <div class = "card">
+        <img src="{{film.image}}" alt="">
+        <div class="card-content">
+          <p>{{film.description}}</p>
+
+
+
+          <a class="button" routerLink="/films/detail/{{film.title}}/{{film._id}}" *ngIf="pag">
+            Find out more
+            <span class="material-symbols-outlined" >
+              arrow_right_alt
+            </span>
+          </a>
+          <div>
+            <a class="button" routerLink="detail/{{film.title}}/{{film._id}}" *ngIf="!pag">
+              Find out more
+              <span class="material-symbols-outlined" >
+                arrow_right_alt
+              </span>
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+      <!--  -->
+      <button class="delete" *ngIf="ruolo === 'admin'">
+        elimina
+        <fa-icon [icon]="faTrash"/>
+      </button>
+    </div>
+
+  </div>
 </ng-template>
 
 
-  <ng-template #loading>
-    <app-loader></app-loader>
-   </ng-template>
+<ng-template #loading>
+  <app-loader></app-loader>
+</ng-template>
 

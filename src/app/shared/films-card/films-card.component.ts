@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { delay, pipe, take } from 'rxjs';
 import { Film } from 'src/app/models/film.model';
 import { FilmService } from './../../services/film.service';
+import { UserService } from 'src/app/services/user.service';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -13,14 +15,17 @@ import { FilmService } from './../../services/film.service';
 export class FilmsCardComponent implements OnInit {
   @Input() pag: string;
 
+  faTrash = faTrash;
   films: Film[]
   filmTotali: number;
   page = 1;
   filmPerPagina = 6;
+  ruolo: any;
 
 
   constructor(
     private filmService: FilmService,
+    private userService: UserService,
     ){}
 
     ngOnDestroy(): void {
@@ -29,6 +34,17 @@ export class FilmsCardComponent implements OnInit {
 
     ngOnInit(): void {
       this.prendiFilm();
+
+      if(JSON.parse(localStorage.getItem('user')) != null) {
+        this.userService.userRole.subscribe({
+          next: (res) => {
+            this.ruolo = res;
+          },
+          error: (err) => {
+            console.log(err);
+          }
+        })
+      }
 
     }
 
@@ -90,4 +106,3 @@ export class FilmsCardComponent implements OnInit {
 
 
 
-    

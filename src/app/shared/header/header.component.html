@@ -12,7 +12,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="col-4 d-flex justify-content-center">
+        <div class="col-4 d-flex collapse navbar-collapse justify-content-center">
           <ul class="navbar-nav  lista-nav">
             <li class="nav-item">
               <a class="nav-link" aria-current="page" routerLink="home">
@@ -39,20 +39,40 @@
 
         <div class="collapse navbar-collapse col-4 d-flex justify-content-end" id="navbarNav" >
           <ul class="navbar-nav lista-nav-destra">
-            <div class="nav-item">
+            <li class="nav-item">
               <a class="nav-link" routerLink="/films/new-film">
                 <img src="../../../assets/images/icons8-spider-man-vecchio.svg" alt="" class="icone-nav">
                 <img src="" alt="" class="icone-nav">
                 <span class="sottolineato">Nuovo Film</span>
               </a>
-            </div>
+            </li>
 
-            <div class="nav-item">
-              <a class="nav-link" routerLink="register">
+
+            <li class="nav-item" *ngIf="!authService.isLogged()">
+              <a class="nav-link" routerLink="login" >
                 <img src="../../../assets/images/icons8-capitan-america.svg" alt="" class="icone-nav">
-                <span class="sottolineato">Registrati</span>
+                <span class="sottolineato">Accedi</span>
               </a>
-            </div>
+            </li>
+
+            <li class="nav-item" *ngIf="authService.isLogged()">
+
+              <a class="nav-link" routerLink="profile">
+                <img src="../../../assets/images/icons8-capitan-america.svg" alt="" class="icone-nav" >
+                <span class="sottolineato"> Profilo {{user.name}}</span>
+              </a>
+
+            </li>
+
+            <li class="nav-item" *ngIf="authService.isLogged()">
+              <a class="nav-link" routerLink="login" >
+                <img src="../../../assets/images/icons8-thanos.svg" alt="" class="icone-nav">
+                <span class="esci" (click)="logout()">Esci</span>
+
+              </a>
+            </li>
+
+
           </ul>
         </div>
 
@@ -64,3 +84,7 @@
   <div class="linea-navbar"></div>
   <!-- <div class="linea-navbar2"></div> -->
 </header>
+
+<ng-template>
+  <app-login></app-login>
+</ng-template>

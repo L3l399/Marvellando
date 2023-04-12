@@ -16,6 +16,7 @@ import { SpeedDialModule } from 'primeng/speeddial';
 import { ToastModule } from 'primeng/toast';
 import { MessagesModule } from 'primeng/messages';
 import { PaginatorModule } from 'primeng/paginator';
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
 
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -30,6 +31,8 @@ import { FilmListComponent } from './components/films/film-list/film-list.compon
 import { RegisterComponent } from './components/user/register/register.component';
 import { NewFilmComponent } from './components/films/new-film/new-film.component';
 import { LoaderComponent } from './shared/loader/loader.component';
+import { LoginComponent } from './components/user/login/login.component';
+import { ProfileComponent } from './components/user/profile/profile.component';
 
 
 
@@ -49,6 +52,8 @@ import { LoaderComponent } from './shared/loader/loader.component';
     RegisterComponent,
     NewFilmComponent,
     LoaderComponent,
+    LoginComponent,
+    ProfileComponent,
 
   ],
   imports: [
@@ -66,7 +71,8 @@ import { LoaderComponent } from './shared/loader/loader.component';
     ToastModule,
     MessagesModule,
     PaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    CKEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -96,7 +96,7 @@
 
       &:hover p, &:hover a {
         opacity: 1;
-        transition: opacity .5s .1s ease-in;
+        transition: opacity .3s .1s ease-in;
         // margin: auto;
       }
 
@@ -113,6 +113,20 @@
       vertical-align: middle;
     }
 
+
+
   }
 
- 
+  .delete {
+    // text-align: center;
+    font-size: 23px;
+    font-family: var(--titolo);
+    background-color: var(--nero);
+    color: var(--bianco);
+    border-radius: 10px;
+    height: 30%;
+    width: 40%;
+    cursor: pointer;
+    margin-left: 30%;
+    margin-top: 5%;
+  }

@@ -1,0 +1,36 @@
+<form #f="ngForm" (ngSubmit)="onSubmit(f.value)" >
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="3" stroke-linecap="square" stroke-linejoin="bevel"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+  <h2 class="top">Accedi</h2>
+
+  <div class="container-campi" >
+
+    <div class="campi">
+      <label for="email">Email</label>
+      <input type="text" id="email" class="form-control" name="email" ngModel/>
+    </div>
+
+    <div class="campi">
+      <label for="password">Password</label>
+      <p-password [toggleMask]="true" [feedback]="false"  name="password" ngModel></p-password>
+    </div>
+
+
+    <button class="bottone" type="submit">Accedi</button>
+    <div class="registrati">
+      <p>
+        Se non hai ancora un account <u routerLink="/register">registrati</u>
+      </p>
+<!--
+      <div class="alert" *ngIf="loginError">
+        {{loginError}}
+      </div> -->
+    </div>
+
+    <div>
+    </div>
+  </div>
+</form>
+
+
+<p-toast position="top-center"></p-toast>

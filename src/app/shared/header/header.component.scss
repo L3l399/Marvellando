@@ -14,11 +14,17 @@ header{
   width: 100%;
   // font-size: 20px;
 }
+.user-loggato{
+display: flex;
+flex-direction: row;
+height: auto;
+}
+
 .lista-nav-destra{
   display: flex;
+  flex-direction: row;
   justify-content: end;
-  width: 100%;
-
+  // width: 100%;
 }
 
 .icone-nav{
@@ -51,6 +57,12 @@ header{
     font-family: var(--titolo);
     font-size: 20px;
   }
+
+  .esci{
+    font-family: var(--thanos);
+    font-size: 20px;
+  }
+
 
   //end navbar
 

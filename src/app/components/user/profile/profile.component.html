@@ -1,0 +1,52 @@
+<div class="container-fluid">
+  <h2>Ecco i tuoi dati</h2>
+  <div class="row">
+    <div class="col-6">
+      <ul>
+        <li>
+          <span class="tipo">Nome:</span>
+          <div class="contenuto">{{user.name}}</div>
+        </li>
+        <li>
+          <span class="tipo">Cognome:</span>
+          <div class="contenuto">{{user.lastName}}</div>
+        </li>
+        <li>
+          <span class="tipo">Email:</span>
+          <div class="contenuto">{{user.email}}</div>
+        </li>
+        <li>
+          <span class="tipo">Data di Nascita:</span>
+          <div class="contenuto">{{user.birthDate | date}}</div>
+        </li>
+        <li>
+          <span class="tipo">Note:</span>
+          <div class="contenuto" [innerHTML]="user.note ? user.note : 'nessuna nota'"></div>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="col-6">
+      <ul>
+        <li>
+          <span class="tipo">Sesso:</span>
+          <div class="contenuto">{{user.gender}}</div>
+        </li>
+        <li>
+          <span class="tipo">Ruolo:</span>
+          <div class="contenuto">{{user.role}}</div>
+        </li>
+        <li>
+          <span class="tipo">Data di iscrizione:</span>
+          <div class="contenuto">{{data}}</div>
+        </li>
+        <li>
+          <span class="tipo">Ultima modifica dei dati: </span>
+          <div class="contenuto">{{aggiornamento}}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
