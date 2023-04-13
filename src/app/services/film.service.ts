@@ -3,12 +3,14 @@ import { Film } from '../models/film.model';
 import { FILMS } from '../mocks/films.mock';
 import { Observable, of } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { ReplaySubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FilmService {
 
+  testoCercato = new ReplaySubject;
   apiBaseUrl = '/api/films';
 
   constructor(private http: HttpClient) { }
@@ -26,5 +28,9 @@ export class FilmService {
 
   insertFilm(film: any): Observable<any> {
     return this.http.post<any>(`${this.apiBaseUrl}/`, film)
+  }
+
+  findFilms(text: string): Observable<any>{
+    return this.http.get<any>(`${this.apiBaseUrl}/search/${text}`);
   }
 }

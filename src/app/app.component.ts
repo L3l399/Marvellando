@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'marvellando';
 
+
+
   imageNames = {
     '/home': 'titolo-marvellando.png',
     '/films': 'titolo-film.png',
@@ -18,7 +20,8 @@ export class AppComponent {
     '/films/new-film': 'titolo-nuovo-film.png',
     // '/login': 'titolo-login.png',
     '/profile': 'titolo-profilo.png',
-    defaultImageName: 'titolo-scheda_film.png'
+    '/search/:text': 'titolo-profilo.png',
+    defaultImageName: 'titolo-film.png'
   };
 
   constructor(private router: Router) { }

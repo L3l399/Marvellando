@@ -9,6 +9,7 @@ import { LoginComponent } from './components/user/login/login.component';
 import { NewFilmComponent } from './components/films/new-film/new-film.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { LoggedInGuard } from './logged-in.guard';
+import { ResultComponent } from './components/films/result/result.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'films', component: FilmsComponent, children: [
     {path: 'detail/:title/:_id', component: DetailComponent},
     {path: 'new-film', component: NewFilmComponent},
+    {path: 'search/:text', component: ResultComponent},
     {path: '', pathMatch: 'full', component: FilmListComponent}
   ]},
   {path: 'register', component: RegisterComponent},

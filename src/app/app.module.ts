@@ -33,6 +33,7 @@ import { NewFilmComponent } from './components/films/new-film/new-film.component
 import { LoaderComponent } from './shared/loader/loader.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
+import { ResultComponent } from './components/films/result/result.component';
 
 
 
@@ -54,6 +55,7 @@ import { ProfileComponent } from './components/user/profile/profile.component';
     LoaderComponent,
     LoginComponent,
     ProfileComponent,
+    ResultComponent,
 
   ],
   imports: [

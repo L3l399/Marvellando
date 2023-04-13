@@ -21,11 +21,15 @@ export class FilmsCardComponent implements OnInit {
   page = 1;
   filmPerPagina = 6;
   ruolo: any;
+  ricercato: any;
+
+  loading = true;
 
 
   constructor(
     private filmService: FilmService,
     private userService: UserService,
+    private router: Router,
     ){}
 
     ngOnDestroy(): void {
@@ -34,7 +38,6 @@ export class FilmsCardComponent implements OnInit {
 
     ngOnInit(): void {
       this.prendiFilm();
-
       if(JSON.parse(localStorage.getItem('user')) != null) {
         this.userService.userRole.subscribe({
           next: (res) => {
@@ -55,10 +58,15 @@ export class FilmsCardComponent implements OnInit {
         )
         .subscribe({
           next: (response) => {
-            this.films = response;
-            this.filmTotali = response.length;
-            if(this.pag){
+
+            if(this.pag != 'ricerca'){
               this.ultimiFilm();
+            }else if (this.pag === 'ricerca'){
+             this.loading = false;
+              this.ricercaFilm();
+            }else{
+              this.films = response;
+              this.filmTotali = response.length;
             }
           },
           error: (error) => {
@@ -76,11 +84,39 @@ export class FilmsCardComponent implements OnInit {
               const dateB = new Date(b.date.split('/').reverse().join('-'));
               return dateB.getTime() - dateA.getTime();
             }).slice(0, 3);
+             this.loading = false;
+
           },
           error: (error) => {
             console.log(error);
           }
         })
+      }
+
+      ricercaFilm(){
+        this.filmService.testoCercato.subscribe({
+          next: (res) => {
+            this.ricercato = res;
+            if(this.ricercato) {
+              this.filmService.findFilms(this.ricercato).subscribe({
+                next: (res) => {
+                  this
+                  this.films = res;
+                  console.log(res);
+                  this.filmTotali = res.length;
+                  this.loading = false;
+
+                },
+                error: (err) => {
+                  console.log(err);
+                }
+              })
+            }
+          },
+          error: (err) => {
+            console.error(err);
+          }
+        });
       }
 
       paginate(event){
