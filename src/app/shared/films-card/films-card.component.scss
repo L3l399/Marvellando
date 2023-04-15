@@ -1,30 +1,23 @@
 
 .info-lista-film{
   color: var(--bianco);
-  font-weight: 700;
+  font-weight: 400;
   font-family: var(--titolo);
   margin-top: 4%;
   text-align: center;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 
   .contenitore-card{
-    display: block;
+    // display: flex;
+
+    position: relative;
     float: left;
     width: 23%;
     margin-left: 7.75%;
     margin-top: 20px;
     margin-bottom: 20px;
-
-    main {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 50px;
-      font-family: 'Noto Sans TC', sans-serif;
-    }
 
     .card {
       border-radius: 10px;
@@ -45,22 +38,22 @@
         transition: opacity .2s ease-out;
       }
 
-      h2 {
-        position: absolute;
-        inset: auto auto 30px 30px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        transition: inset .3s .3s ease-out;
-        font-family: 'Noto Sans TC', sans-serif;
-        font-weight: normal;
-        text-align: center;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 2px #000,
-        -2px -2px 2px #000,
-        2px -2px 2px #000,
-        -2px 2px 2px #000;
-      }
+      // h2 {
+      //   position: absolute;
+      //   inset: auto auto 30px 30px;
+      //   left: 0;
+      //   right: 0;
+      //   margin: auto;
+      //   transition: inset .3s .3s ease-out;
+      //   font-family: 'Noto Sans TC', sans-serif;
+      //   font-weight: normal;
+      //   text-align: center;
+      //   text-transform: uppercase;
+      //   text-shadow: 2px 2px 2px #000,
+      //   -2px -2px 2px #000,
+      //   2px -2px 2px #000,
+      //   -2px 2px 2px #000;
+      // }
 
       p, a {
         position: absolute;
@@ -198,3 +191,114 @@
                 0 0 30px #323232,
                 0 0 40px #4eacd4;
   }
+
+
+  @media only screen and (min-width: 0px) and (max-width: 480px){
+    .contenitore-card{
+      .card{
+        p, a {
+          font-size: 15px;//
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px){
+    .contenitore-card{
+      .card{
+        p, a {
+          font-size: 17px;//
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1023px){
+    .contenitore-card{
+      .card{
+        p, a {
+          font-size: 20px;//
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: 1023px){
+    .contenitore-card{
+      float: unset;
+      clear: left;
+      width: 50%;
+      margin-left: 25%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      .card {
+        border-radius: 10px;
+        overflow: hidden;
+        cursor: unset;
+        position: relative;
+        color: rgb(245, 245, 245);
+        box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+
+        img {
+          // position: absolute;
+          object-fit: cover;
+          width: 100%;
+          // height: 100%;
+          // top: 0;
+          // left: 0;
+          opacity: unset;
+          transition: none;
+        }
+
+        p, a {
+          position: absolute;
+          opacity: 0;
+          max-width: 90%;//
+          font-size: 20px;//
+          transition: unset;
+
+          text-shadow: 2px 2px 2px #000,
+          -2px -2px 2px #000,
+          2px -2px 2px #000,
+          -2px 2px 2px #000;
+
+
+        }
+
+        p {
+          display: none;
+          inset: unset;
+        }
+
+        a {
+          position: auto auto 15px 30px;
+          color: none;
+        }
+
+
+
+        &:not(:focus):not(:active):not(hover) p, &:hover a {
+          opacity: none;
+          transition: none;
+          // margin: auto;
+        }
+
+        &:not(:focus):not(:active):not(hover) img {
+          transition: none;
+          opacity: unset;
+          // opacity: 0.7!important;
+          // box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.584)!important;
+      }
+
+
+    }
+
+
+  }
+
+    .contenitore-card .card a {
+      opacity: 1;
+      text-decoration: none;
+      transition: unset;
+    }
+
+
+}

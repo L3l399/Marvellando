@@ -274,3 +274,41 @@
     transform: translateX(79px) rotate(0deg);
   }
 }
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+
+  .modal-body{
+
+    .image{
+      width: 80%;//
+      margin-left: 10%;
+    }
+  }
+
+  .bottoni-modale{
+    width: 46%;//
+
+  }
+
+}
+@media only screen and (min-width: 481px) and (max-width: 768px){
+
+  .modal-body{
+    .image{
+      width: 80%;//
+      margin-left: 10%;
+    }
+  }
+
+  .bottoni-modale{
+
+    width: 46%;//
+
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 1023px){
+
+
+
+}
+

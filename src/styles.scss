@@ -92,3 +92,33 @@ font-family: 'Noto Sans TC', sans-serif;
 // }
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  .prefondo{
+  .fondo{
+  width: 96%;
+  float: left;
+  margin-left: 2%;
+  }
+
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px){
+  .prefondo{
+  .fondo{
+  width: 96%;
+  float: left;
+  margin-left: 2%;
+  }
+
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+  .prefondo{
+  .fondo{
+  width: 96%;
+  float: left;
+  margin-left: 2%;
+  }
+  }
+}

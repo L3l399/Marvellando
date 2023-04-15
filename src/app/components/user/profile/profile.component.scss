@@ -3,7 +3,7 @@ h2{
   text-align: center;
   margin-top: 20px;
   color: var(--bianco);
-  font-family: var(--titolo);
+  font-family: var(--thanos);
   font-weight: 550;
   font-size: 50px;
 }
@@ -29,4 +29,64 @@ ul{
   color: var(--bianco);
   font-size: 20px;
 
+}
+
+@media only screen and (min-width: 0px) and (max-width: 480px){
+
+  h2{
+    font-family: var(--thanos);
+    font-weight: 550;
+    font-size: 25px;//
+  }
+  .container-fluid{
+    width: 90%;//
+  }
+  .tipo{
+    font-weight: 450;
+    font-size: 17px;//
+  }
+
+  .contenuto{
+    color: var(--bianco);
+    font-size: 13px;//
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px){
+  h2{
+    font-family: var(--thanos);
+    font-weight: 550;
+    font-size: 40px;//
+  }
+  .container-fluid{
+    width: 90%;//
+  }
+  .tipo{
+    font-weight: 450;
+    font-size: 25px;//
+  }
+
+  .contenuto{
+    color: var(--bianco);
+    font-size: 15px;//
+  }
+
+}
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+  h2{
+    font-family: var(--thanos);
+    font-weight: 550;
+    font-size: 40px;//
+  }
+  .container-fluid{
+    width: 80%;//
+  }
+  .tipo{
+    font-weight: 450;
+    font-size: 25px;//
+  }
+
+  .contenuto{
+    color: var(--bianco);
+    font-size: 15px;//
+  }
 }

@@ -10,6 +10,7 @@ import { NewFilmComponent } from './components/films/new-film/new-film.component
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { LoggedInGuard } from './logged-in.guard';
 import { ResultComponent } from './components/films/result/result.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'register', component: RegisterComponent},
   {path: 'login', component: LoginComponent},
   {path: 'profile', component: ProfileComponent, canActivate: [LoggedInGuard]},
+  {path: 'contacts', component: ContactsComponent},
   {path: '**', redirectTo: 'home'}
 ];
 

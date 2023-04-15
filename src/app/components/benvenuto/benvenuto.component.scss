@@ -67,4 +67,24 @@ main {
   text-align: start;
 }
 
+@media only screen and (min-width: 0px) and (max-width: 480px){
+  .benvenuto{
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 481px) and (max-width: 768px){
+
+}
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+
+
+}
+@media only screen and (min-width: 0px) and (max-width: 1023px){
+  main {
+    display: none;
+  }
+  .card {
+    display: none;
+  }
+}
 

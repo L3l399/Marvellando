@@ -21,6 +21,8 @@ export class AppComponent {
     // '/login': 'titolo-login.png',
     '/profile': 'titolo-profilo.png',
     '/search/:text': 'titolo-profilo.png',
+    '/login': 'titolo-accedi.png',
+    '/contacts': 'titolo-contatti.png',
     defaultImageName: 'titolo-film.png'
   };
 

@@ -37,18 +37,25 @@ export class FilmsCardComponent implements OnInit {
     }
 
     ngOnInit(): void {
-      this.prendiFilm();
+      if(this.pag === 'ricerca'){
+        this.ricercaFilm();
+      }else{
+        this.prendiFilm();
+      }
       if(JSON.parse(localStorage.getItem('user')) != null) {
-        this.userService.userRole.subscribe({
-          next: (res) => {
-            this.ruolo = res;
-          },
-          error: (err) => {
-            console.log(err);
-          }
-        })
+        const user = JSON.parse(localStorage.getItem('user'));
+      this.onGetUser(user.email);
       }
 
+    }
+
+    onGetUser(email): void {
+      this.userService.getUser(email).pipe(take(1)).subscribe({
+        next: res => {
+          this.ruolo = res.role;
+        },
+        error: (err) => console.log(err)
+      })
     }
 
     prendiFilm(){
@@ -58,16 +65,9 @@ export class FilmsCardComponent implements OnInit {
         )
         .subscribe({
           next: (response) => {
-
-            if(this.pag != 'ricerca'){
-              this.ultimiFilm();
-            }else if (this.pag === 'ricerca'){
-             this.loading = false;
-              this.ricercaFilm();
-            }else{
+              this.loading = false;
               this.films = response;
-              this.filmTotali = response.length;
-            }
+
           },
           error: (error) => {
             console.log(error);
@@ -100,11 +100,14 @@ export class FilmsCardComponent implements OnInit {
             if(this.ricercato) {
               this.filmService.findFilms(this.ricercato).subscribe({
                 next: (res) => {
-                  this
-                  this.films = res;
-                  console.log(res);
-                  this.filmTotali = res.length;
+
                   this.loading = false;
+                  this.films = res;
+                  this.filmTotali = res.length;
+                  if(res.length <= 6){
+                    this.filmPerPagina = res.length;
+                  }
+                  console.log(res);
 
                 },
                 error: (err) => {

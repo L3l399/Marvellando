@@ -34,6 +34,7 @@ import { LoaderComponent } from './shared/loader/loader.component';
 import { LoginComponent } from './components/user/login/login.component';
 import { ProfileComponent } from './components/user/profile/profile.component';
 import { ResultComponent } from './components/films/result/result.component';
+import { ContactsComponent } from './components/contacts/contacts.component';
 
 
 
@@ -56,6 +57,7 @@ import { ResultComponent } from './components/films/result/result.component';
     LoginComponent,
     ProfileComponent,
     ResultComponent,
+    ContactsComponent,
 
   ],
   imports: [

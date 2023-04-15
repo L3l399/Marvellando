@@ -103,8 +103,8 @@
 
   // modale
   div#container-utente {
-    background: var(--nero);
-    width: 100%;
+    background: rgb(5 5 5 / 62%);
+    width: 101%;
     height: 100vh;
     position: fixed;
     display: flex;
@@ -120,7 +120,7 @@
       width: 60%;
       border: 5px solid var(--nero);
       border-radius: 30px;
-      padding: 16px;
+      padding: 10px;
 
       h2 {
         font-size: 30px!important;
@@ -163,6 +163,7 @@
         outline: none;
         color: rgb(245, 245, 245);
         font-size: 17px;
+        font-family: var(--titolo);
       }
 
       button:hover {
@@ -210,6 +211,59 @@
     }
   }
 
+  @media only screen and (min-width: 0px) and (max-width: 480px){
+    div#container-utente {
+      width: 110%;//
+      margin-left: -7%;//
+
+      div#dati-utente {
+
+        h2 {
+          font-size: 16px!important;
+        }
+
+        ul {
+          height: 75px;//
+          margin-top: 18px;
+          font-size: 13px;//
+          text-align: left;
+
+        }
+
+      }
+    }
+  }
+  @media only screen and (min-width: 481px) and (max-width: 768px){
+    div#container-utente {
+      width: 110%;//
+      margin-left: -7%;//
+
+      div#dati-utente {
+
+        h2 {
+          font-size: 20px!important;
+        }
+
+        ul {
+          height: 75px;//
+          margin-top: 18px;
+          font-size: 17px;//
+          text-align: left;
+
+        }
+
+      }
+    }
+  }
+  @media only screen and (min-width: 769px) and (max-width: 1023px){
+    div#container-utente {
+      width: 110%;//
+      margin-left: -7%;//
+    }
+  }
+  @media only screen and (min-width: 0px) and (max-width: 1023px){
+
+  }
 
 
 

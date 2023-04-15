@@ -1,41 +1,90 @@
-<div class="container-fluid">
+<div class="container-fluid schermo-grande">
   <div class="row">
-    <div class="col-5 justify-content-center container-lato-sx">
-      <div class="lato-sx">
-        <img src="{{film.image}}" alt="">
-      </div>
-    </div>
-    <div class="col-7 lato-dx">
-      <h2>{{film.title}}</h2>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-6">
-            <div>
-              <h4>
-                <fa-icon [icon]="faClapperboard"/>
-                Director
-              </h4>
-              <p>{{film.director}}</p>
-              <h4>
-                <fa-icon [icon]="faMasksTheater"/>
-                Cast</h4>
-                <p>{{film.cast}}</p>
-                <h4>
-                  <fa-icon [icon]="faCalendarDay"/>
-                  Data di Uscita</h4>
-                  <p>{{film.date | date: 'longDate'}}</p>
-                </div>
-              </div>
-              <div class="col-6">
-                <h4>
-                  <fa-icon [icon]="faScroll"/>
-                  Trama
-                </h4>
-                <p class="film-description">{{film.description}}</p>
-              </div>
+
+<div class="col-5 justify-content-center container-lato-sx">
+  <div class="lato-sx">
+    <img src="{{film.image}}" alt="">
+  </div>
+</div>
+
+<div class="col-7 lato-dx">
+  <h2 class="titolo">{{film.title}}</h2>
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-6">
+        <div>
+          <h4>
+            <fa-icon [icon]="faClapperboard"/>
+            Director
+          </h4>
+          <p>{{film.director}}</p>
+          <h4>
+            <fa-icon [icon]="faMasksTheater"/>
+            Cast</h4>
+            <p>{{film.cast}}</p>
+            <h4>
+              <fa-icon [icon]="faCalendarDay"/>
+              Data di Uscita</h4>
+              <p>{{film.date | date: 'longDate'}}</p>
             </div>
+        </div>
+
+          <div class="col-6">
+            <h4>
+              <fa-icon [icon]="faScroll"/>
+              Trama
+            </h4>
+            <p class="film-description">{{film.description}}</p>
           </div>
         </div>
       </div>
-
     </div>
+  </div>
+</div>
+
+<div class="container-fluid schermo-piccolo">
+  <h2 class="titolo">{{film.title}}</h2>
+  <div class="row d-flex justify-content-center">
+      <div class="col-sm-8 d-flex justify-content-center container-lato-sx">
+        <div class="lato-sx">
+          <img src="{{film.image}}" alt="">
+        </div>
+      </div>
+  </div>
+      <div class="row" style="margin: 0.1px;">
+        <div class="col-4">
+          <h4>
+            <fa-icon [icon]="faClapperboard"/>
+            Director
+          </h4>
+          <p>{{film.director}}</p>
+        </div>
+        <div class="col-4">
+          <h4>
+          <fa-icon [icon]="faMasksTheater"/>
+          Cast
+          </h4>
+          <p>{{film.cast}}</p>
+        </div>
+        <div class="col-4">
+          <h4>
+          <fa-icon [icon]="faCalendarDay"/>
+          Data di Uscita
+          </h4>
+          <p>{{film.date | date: 'longDate'}}</p>
+        </div>
+      </div>
+
+      <div class="row" style="margin: 0.1px;">
+        <div class="col-12">
+          <h4>
+            <fa-icon [icon]="faScroll"/>
+            Trama
+          </h4>
+          <p class="film-description">{{film.description}}</p>
+        </div>
+      </div>
+</div>
+
+

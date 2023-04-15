@@ -1,5 +1,3 @@
-
-
   <div class="container-cards">
     <div class="container-pagination" *ngIf="pag!='home'">
       <div class="info-lista-film">
@@ -12,22 +10,23 @@
 
     <div class="contenitore-card" *ngFor="let film of films | slice: (page * filmPerPagina) - filmPerPagina : page * filmPerPagina">
 
+
       <div class = "card">
         <img src="{{film.image}}" alt="">
         <div class="card-content">
-          <p>{{film.description}}</p>
+          <p>{{film.description | slice: 0:170 }}...</p>
 
 
 
           <a class="button" routerLink="/films/detail/{{film.title}}/{{film._id}}" *ngIf="pag">
-            Find out more
+            Vedi di piú
             <span class="material-symbols-outlined" >
               arrow_right_alt
             </span>
           </a>
           <div>
             <a class="button" routerLink="detail/{{film.title}}/{{film._id}}" *ngIf="!pag">
-              Find out more
+              Vedi di piú
               <span class="material-symbols-outlined" >
                 arrow_right_alt
               </span>
@@ -62,4 +61,5 @@
     </div>
     </div>
 </ng-template>
+
 

@@ -1,13 +1,12 @@
-.main{
-  position: relative;
-  top: 2%;
-}
+// .main{
+
+// }
 
 .sottotitolo{
   color: var(--bianco);
   font-weight: 700;
   font-family: var(--titolo);
-  margin-top: 49%;
+  margin-top: 20px;
   text-align: center;
   font-size: 50px;
 }
@@ -21,6 +20,9 @@
     display: flex;
     justify-content: center;
     margin: 0;
+    position: relative;
+    top: 2%;
+    // margin-top: 10px;
   }
 
   // $color-primary-white: var(--bianco);
